@@ -1,0 +1,14 @@
+C:\Users\jgibb\OneDrive\Desktop\Jordan's Code Project Journey\Roguelike C#\Dungeons of Valrinth\bin\Debug\Dungeons of Valrinth.exe.config
+C:\Users\jgibb\OneDrive\Desktop\Jordan's Code Project Journey\Roguelike C#\Dungeons of Valrinth\bin\Debug\Dungeons of Valrinth.exe
+C:\Users\jgibb\OneDrive\Desktop\Jordan's Code Project Journey\Roguelike C#\Dungeons of Valrinth\bin\Debug\Dungeons of Valrinth.pdb
+C:\Users\jgibb\OneDrive\Desktop\Jordan's Code Project Journey\Roguelike C#\Dungeons of Valrinth\bin\Debug\OpenTK.dll
+C:\Users\jgibb\OneDrive\Desktop\Jordan's Code Project Journey\Roguelike C#\Dungeons of Valrinth\bin\Debug\RLNET.dll
+C:\Users\jgibb\OneDrive\Desktop\Jordan's Code Project Journey\Roguelike C#\Dungeons of Valrinth\bin\Debug\RogueSharp.dll
+C:\Users\jgibb\OneDrive\Desktop\Jordan's Code Project Journey\Roguelike C#\Dungeons of Valrinth\bin\Debug\OpenTK.xml
+C:\Users\jgibb\OneDrive\Desktop\Jordan's Code Project Journey\Roguelike C#\Dungeons of Valrinth\bin\Debug\OpenTK.dll.config
+C:\Users\jgibb\OneDrive\Desktop\Jordan's Code Project Journey\Roguelike C#\Dungeons of Valrinth\obj\Debug\Dungeons of Valrinth.csproj.AssemblyReference.cache
+C:\Users\jgibb\OneDrive\Desktop\Jordan's Code Project Journey\Roguelike C#\Dungeons of Valrinth\obj\Debug\Dungeons of Valrinth.csproj.CoreCompileInputs.cache
+C:\Users\jgibb\OneDrive\Desktop\Jordan's Code Project Journey\Roguelike C#\Dungeons of Valrinth\obj\Debug\Dungeons.5C0F804A.Up2Date
+C:\Users\jgibb\OneDrive\Desktop\Jordan's Code Project Journey\Roguelike C#\Dungeons of Valrinth\obj\Debug\Dungeons of Valrinth.exe
+C:\Users\jgibb\OneDrive\Desktop\Jordan's Code Project Journey\Roguelike C#\Dungeons of Valrinth\obj\Debug\Dungeons of Valrinth.pdb
+C:\Users\jgibb\OneDrive\Desktop\Jordan's Code Project Journey\Roguelike C#\Dungeons of Valrinth\bin\Debug\terminal8x8.png
