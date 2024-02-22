@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Dungeons_of_Valrinth.Core;
+﻿using Dungeons_of_Valrinth.Core;
+using Dungeons_of_Valrinth.Systems;
 using RLNET;
 
 namespace Dungeons_of_Valrinth
@@ -35,6 +31,8 @@ namespace Dungeons_of_Valrinth
         private static readonly int _inventoryHeight = 11;
         private static RLConsole _inventoryConsole;
 
+        public static DungeonMap DungeonMap { get; private set; }
+        public static Player Player { get; private set; }
         public static void Main()
         {
             // This must be the exact name of the bitmap font file we are using or it will error.
@@ -51,6 +49,13 @@ namespace Dungeons_of_Valrinth
             _messageConsole = new RLConsole(_messageWidth, _messageHeight);
             _statConsole = new RLConsole(_statWidth, _statHeight);
             _inventoryConsole = new RLConsole(_inventoryWidth, _inventoryHeight);
+
+            Player = new Player();
+            // Creating our map
+            MapGenerator mapGenerator = new MapGenerator(_mapWidth, _mapHeight);
+            DungeonMap = mapGenerator.CreateMap();
+            // Update the field of view
+            DungeonMap.UpdatePlayerFieldOfView();
 
             // Set up a handler for RLNET's Update event
             _rootConsole.Update += OnRootConsoleUpdate;
@@ -81,6 +86,12 @@ namespace Dungeons_of_Valrinth
 
         private static void OnRootConsoleRender(object sender, UpdateEventArgs e)
         {
+            // Draw the map
+            DungeonMap.Draw(_mapConsole);
+
+            // Draw the player
+            Player.Draw(_mapConsole, DungeonMap);
+
             // Blit the sub consoles to the root console in the correct locations
             RLConsole.Blit(_mapConsole, 0, 0, _mapWidth, _mapHeight,
               _rootConsole, 0, _inventoryHeight);
