@@ -12,3 +12,7 @@ C:\Users\jgibb\OneDrive\Desktop\Jordan's Code Project Journey\Roguelike C#\Dunge
 C:\Users\jgibb\OneDrive\Desktop\Jordan's Code Project Journey\Roguelike C#\Dungeons of Valrinth\obj\Debug\Dungeons of Valrinth.exe
 C:\Users\jgibb\OneDrive\Desktop\Jordan's Code Project Journey\Roguelike C#\Dungeons of Valrinth\obj\Debug\Dungeons of Valrinth.pdb
 C:\Users\jgibb\OneDrive\Desktop\Jordan's Code Project Journey\Roguelike C#\Dungeons of Valrinth\bin\Debug\terminal8x8.png
+C:\Users\jgibb\OneDrive\Desktop\Jordan's Code Project Journey\Roguelike C#\Dungeons of Valrinth\bin\Debug\Dungeons of Valrinth.exe.manifest
+C:\Users\jgibb\OneDrive\Desktop\Jordan's Code Project Journey\Roguelike C#\Dungeons of Valrinth\bin\Debug\Dungeons of Valrinth.application
+C:\Users\jgibb\OneDrive\Desktop\Jordan's Code Project Journey\Roguelike C#\Dungeons of Valrinth\obj\Debug\Dungeons of Valrinth.exe.manifest
+C:\Users\jgibb\OneDrive\Desktop\Jordan's Code Project Journey\Roguelike C#\Dungeons of Valrinth\obj\Debug\Dungeons of Valrinth.application

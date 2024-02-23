@@ -21,5 +21,10 @@ namespace Dungeons_of_Valrinth.Core
         public static RLColor Gold = Swatch.DbSun;
 
         public static RLColor KoboldColor = Swatch.DbBrightWood;
+
+        public static RLColor DoorBackground = Swatch.ComplimentDarkest;
+        public static RLColor Door = Swatch.ComplimentLighter;
+        public static RLColor DoorBackgroundFov = Swatch.ComplimentDarker;
+        public static RLColor DoorFov = Swatch.ComplimentLightest;
     }
 }

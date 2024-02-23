@@ -9,13 +9,15 @@ namespace Dungeons_of_Valrinth.Core
     public class DungeonMap : Map
     {
         private readonly List<Monster> _monsters;
-        public List<Rectangle> Rooms;
-        
+        public List<Rectangle> Rooms { get; set; }
+        public List<Door> Doors { get; set; }
+
         public DungeonMap()
         {
             // Initialize the list of rooms when we create a new DungeonMap
             _monsters = new List<Monster>();
             Rooms = new List<Rectangle>();
+            Doors = new List<Door>();
         }
 
         // This method will be called any time we move the player to update field-of-view
@@ -42,11 +44,13 @@ namespace Dungeons_of_Valrinth.Core
             {
                 // The cell the actor was previously on is now walkable
                 SetIsWalkable(actor.X, actor.Y, true);
+
                 // Update the actor's position
                 actor.X = x;
                 actor.Y = y;
                 // The new cell the actor is on is now not walkable
                 SetIsWalkable(actor.X, actor.Y, false);
+                OpenDoor(actor, x, y);
                 // Don't forget to update the field of view if we just repositioned the player
                 if (actor is Player)
                 {
@@ -55,6 +59,27 @@ namespace Dungeons_of_Valrinth.Core
                 return true;
             }
             return false;
+        }
+
+        // Return the door at the x,y position or null if one is not found.
+        public Door GetDoor(int x, int y)
+        {
+            return Doors.SingleOrDefault(d => d.X == x && d.Y == y);
+        }
+
+        // The actor opens the door located at the x,y position
+        private void OpenDoor(Actor actor, int x, int y)
+        {
+            Door door = GetDoor(x, y);
+            if (door != null && !door.IsOpen)
+            {
+                door.IsOpen = true;
+                var cell = GetCell(x, y);
+                // Once the door is opened it should be marked as transparent and no longer block field-of-view
+                SetCellProperties(x, y, true, cell.IsWalkable, cell.IsExplored);
+
+                Game.MessageLog.Add($"{actor.Name} opened a door");
+            }
         }
 
         // Called by MapGenerator after we generate a new map to add the player to the map
@@ -140,6 +165,11 @@ namespace Dungeons_of_Valrinth.Core
             }
             // Keep an index so we know which position to draw monster stats at
             int i = 0;
+
+            foreach (Door door in Doors)
+            {
+                door.Draw(mapConsole, this);
+            }
 
             // Iterate through each monster on the map and draw it after drawing the Cells
             foreach (Monster monster in _monsters)

@@ -3,6 +3,7 @@ using Dungeons_of_Valrinth.Monsters;
 using RogueSharp;
 using RogueSharp.DiceNotation;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Dungeons_of_Valrinth.Systems
@@ -38,7 +39,7 @@ namespace Dungeons_of_Valrinth.Systems
 
             // Try to place as many rooms as the specified maxRooms
             // Note: Only using decrementing loop because of WordPress formatting
-            for (int r = _maxRooms; r > 0; r--)
+            for (int r = 0; r < _maxRooms; r++)
             {
                 // Determine the size and position of the room randomly
                 int roomWidth = Game.Random.Next(_roomMinSize, _roomMaxSize);
@@ -58,12 +59,6 @@ namespace Dungeons_of_Valrinth.Systems
                 {
                     _map.Rooms.Add(newRoom);
                 }
-            }
-            // Iterate through each room that we wanted placed 
-            // call CreateRoom to make it
-            foreach (Rectangle room in _map.Rooms)
-            {
-                CreateRoom(room);
             }
 
             // Iterate through each room that was generated
@@ -89,6 +84,14 @@ namespace Dungeons_of_Valrinth.Systems
                 }
             }
 
+            // Iterate through each room that we wanted placed 
+            // call CreateRoom to make it
+            foreach (Rectangle room in _map.Rooms)
+            {
+                CreateRoom(room);
+                CreateDoors(room);
+            }
+
             PlacePlayer();
             PlaceMonsters();
 
@@ -108,21 +111,6 @@ namespace Dungeons_of_Valrinth.Systems
             }
         }
 
-        // Find the center of the first room that we created and place the Player there
-        private void PlacePlayer()
-        {
-            Player player = Game.Player;
-            if (player == null)
-            {
-                player = new Player();
-            }
-
-            player.X = _map.Rooms[0].Center.X;
-            player.Y = _map.Rooms[0].Center.Y;
-
-            _map.AddPlayer(player);
-        }
-
         // Carve a tunnel out of the map parallel to the x-axis
         private void CreateHorizontalTunnel(int xStart, int xEnd, int yPosition)
         {
@@ -139,6 +127,92 @@ namespace Dungeons_of_Valrinth.Systems
             {
                 _map.SetCellProperties(xPosition, y, true, true);
             }
+        }
+
+        private void CreateDoors(Rectangle room)
+        {
+            // The the boundries of the room
+            int xMin = room.Left;
+            int xMax = room.Right;
+            int yMin = room.Top;
+            int yMax = room.Bottom;
+
+            // Put the rooms border cells into a list
+            List<ICell> borderCells = _map.GetCellsAlongLine(xMin, yMin, xMax, yMin).ToList();
+            borderCells.AddRange(_map.GetCellsAlongLine(xMin, yMin, xMin, yMax));
+            borderCells.AddRange(_map.GetCellsAlongLine(xMin, yMax, xMax, yMax));
+            borderCells.AddRange(_map.GetCellsAlongLine(xMax, yMin, xMax, yMax));
+
+            // Go through each of the rooms border cells and look for locations to place doors.
+            foreach (Cell cell in borderCells)
+            {
+                if (IsPotentialDoor(cell))
+                {
+                    // A door must block field-of-view when it is closed.
+                    _map.SetCellProperties(cell.X, cell.Y, false, true);
+                    _map.Doors.Add(new Door
+                    {
+                        X = cell.X,
+                        Y = cell.Y,
+                        IsOpen = false
+                    });
+                }
+            }
+        }
+
+        // Checks to see if a cell is a good candidate for placement of a door
+        private bool IsPotentialDoor(Cell cell)
+        {
+            // If the cell is not walkable
+            // then it is a wall and not a good place for a door
+            if (!cell.IsWalkable)
+            {
+                return false;
+            }
+
+            // Store references to all of the neighboring cells 
+            ICell right = _map.GetCell(cell.X + 1, cell.Y);
+            ICell left = _map.GetCell(cell.X - 1, cell.Y);
+            ICell top = _map.GetCell(cell.X, cell.Y - 1);
+            ICell bottom = _map.GetCell(cell.X, cell.Y + 1);
+
+            // Make sure there is not already a door here
+            if (_map.GetDoor(cell.X, cell.Y) != null ||
+                _map.GetDoor(right.X, right.Y) != null ||
+                _map.GetDoor(left.X, left.Y) != null ||
+                _map.GetDoor(top.X, top.Y) != null ||
+                _map.GetDoor(bottom.X, bottom.Y) != null)
+            {
+                return false;
+            }
+
+            // This is a good place for a door on the left or right side of the room
+            if (right.IsWalkable && left.IsWalkable && !top.IsWalkable && !bottom.IsWalkable)
+            {
+                return true;
+            }
+
+            // This is a good place for a door on the top or bottom of the room
+            if (!right.IsWalkable && !left.IsWalkable && top.IsWalkable && bottom.IsWalkable)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        // Find the center of the first room that we created and place the Player there
+        private void PlacePlayer()
+        {
+            Player player = Game.Player;
+            if (player == null)
+            {
+                player = new Player();
+            }
+
+            player.X = _map.Rooms[0].Center.X;
+            player.Y = _map.Rooms[0].Center.Y;
+
+            _map.AddPlayer(player);
         }
 
         private void PlaceMonsters()
