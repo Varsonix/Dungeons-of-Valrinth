@@ -41,6 +41,7 @@ namespace Dungeons_of_Valrinth
         public static Player Player { get; set; }
         public static IRandom Random { get; private set; }
         public static MessageLog MessageLog { get; private set; }
+        public static SchedulingSystem SchedulingSystem { get; private set; }
         public static void Main()
         {
             // Establish the seed for the random number generator from the current time
@@ -65,8 +66,8 @@ namespace Dungeons_of_Valrinth
             _inventoryConsole = new RLConsole(_inventoryWidth, _inventoryHeight);
 
             // Create a new MessageLog and print the random seed used to generate the level
-            
 
+            SchedulingSystem = new SchedulingSystem();
             CommandSystem = new CommandSystem();
             // Creating our map
             MapGenerator mapGenerator = new MapGenerator(_mapWidth, _mapHeight, 20, 13, 7);
@@ -90,58 +91,44 @@ namespace Dungeons_of_Valrinth
 
         private static void OnRootConsoleUpdate(object sender, UpdateEventArgs e)
         {
-            // Set background color and text for each console 
-            // so that we can verify they are in the correct positions
-
-            _inventoryConsole.SetBackColor(0, 0, _inventoryWidth, _inventoryHeight, Swatch.DbWood);
-            _inventoryConsole.Print(1, 1, "Inventory", Colors.TextHeading);
-
             bool didPlayerAct = false;
             RLKeyPress keyPress = _rootConsole.Keyboard.GetKeyPress();
 
-            if (keyPress != null)
+            if (CommandSystem.IsPlayerTurn)
             {
-                if (keyPress.Key == RLKey.W)
+                if (keyPress != null)
                 {
-                    didPlayerAct = CommandSystem.MovePlayer(Direction.Up);
+                    if (keyPress.Key == RLKey.W)
+                    {
+                        didPlayerAct = CommandSystem.MovePlayer(Direction.Up);
+                    }
+                    else if (keyPress.Key == RLKey.S)
+                    {
+                        didPlayerAct = CommandSystem.MovePlayer(Direction.Down);
+                    }
+                    else if (keyPress.Key == RLKey.A)
+                    {
+                        didPlayerAct = CommandSystem.MovePlayer(Direction.Left);
+                    }
+                    else if (keyPress.Key == RLKey.D)
+                    {
+                        didPlayerAct = CommandSystem.MovePlayer(Direction.Right);
+                    }
+                    else if (keyPress.Key == RLKey.Escape)
+                    {
+                        _rootConsole.Close();
+                    }
                 }
-                else if (keyPress.Key == RLKey.S)
+
+                if (didPlayerAct)
                 {
-                    didPlayerAct = CommandSystem.MovePlayer(Direction.Down);
-                }
-                else if (keyPress.Key == RLKey.A)
-                {
-                    didPlayerAct = CommandSystem.MovePlayer(Direction.Left);
-                }
-                else if (keyPress.Key == RLKey.D)
-                {
-                    didPlayerAct = CommandSystem.MovePlayer(Direction.Right);
-                }
-                else if (keyPress.Key == RLKey.Q)
-                {
-                    didPlayerAct = CommandSystem.MovePlayer(Direction.UpLeft);
-                }
-                else if (keyPress.Key == RLKey.E)
-                {
-                    didPlayerAct = CommandSystem.MovePlayer(Direction.UpRight);
-                }
-                else if (keyPress.Key == RLKey.C)
-                {
-                    didPlayerAct = CommandSystem.MovePlayer(Direction.DownRight);
-                }
-                else if (keyPress.Key == RLKey.Z)
-                {
-                    didPlayerAct = CommandSystem.MovePlayer(Direction.DownLeft);
-                }
-                else if (keyPress.Key == RLKey.Escape)
-                {
-                    _rootConsole.Close();
+                    _renderRequired = true;
+                    CommandSystem.EndPlayerTurn();
                 }
             }
-            // In OnRootConsoleUpdate() replace the if ( didPlayerAct ) block
-            if (didPlayerAct)
+            else
             {
-                // Every time the player acts increment the steps and log it
+                CommandSystem.ActivateMonsters();
                 _renderRequired = true;
             }
         }

@@ -4,7 +4,7 @@ using RogueSharp;
 
 namespace Dungeons_of_Valrinth.Core
 {
-    public class Actor : IActor, IDrawable
+    public class Actor : IActor, IDrawable, IScheduleable
     {
         // IActor
         private int _attack;
@@ -160,6 +160,14 @@ namespace Dungeons_of_Valrinth.Core
             {
                 // When not in field-of-view just draw a normal floor
                 console.Set(X, Y, Colors.Floor, Colors.FloorBackground, '.');
+            }
+        }
+
+        public int Time
+        {
+            get
+            {
+                return Speed;
             }
         }
     }
