@@ -153,9 +153,12 @@ namespace Dungeons_of_Valrinth
             if (_renderRequired)
 
             {
-                MessageLog.Draw(_messageConsole);
+                _mapConsole.Clear();
+                _statConsole.Clear();
+                _messageConsole.Clear();
 
-                DungeonMap.Draw(_mapConsole);
+                MessageLog.Draw(_messageConsole);
+                DungeonMap.Draw(_mapConsole, _statConsole);
 
                 Player.Draw(_mapConsole, DungeonMap);
                 Player.DrawStats(_statConsole);
