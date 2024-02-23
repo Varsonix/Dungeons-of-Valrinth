@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\jgibb\\OneDrive\\Desktop\\Jordan\u0027s Code Project Journey\\Roguelike C#\\Dungeons of Valrinth\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9614ABC3-8950-4911-929A-FB4FE1A2BFE5}|Dungeons of Valrinth.csproj|C:\\Users\\jgibb\\OneDrive\\Desktop\\Jordan\u0027s Code Project Journey\\Roguelike C#\\Dungeons of Valrinth\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9614ABC3-8950-4911-929A-FB4FE1A2BFE5}|Dungeons of Valrinth.csproj|solutionrelative:game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9614ABC3-8950-4911-929A-FB4FE1A2BFE5}|Dungeons of Valrinth.csproj|c:\\users\\jgibb\\onedrive\\desktop\\jordan\u0027s code project journey\\roguelike c#\\dungeons of valrinth\\core\\dungeonmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9614ABC3-8950-4911-929A-FB4FE1A2BFE5}|Dungeons of Valrinth.csproj|solutionrelative:core\\dungeonmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9614ABC3-8950-4911-929A-FB4FE1A2BFE5}|Dungeons of Valrinth.csproj|c:\\users\\jgibb\\onedrive\\desktop\\jordan\u0027s code project journey\\roguelike c#\\dungeons of valrinth\\core\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9614ABC3-8950-4911-929A-FB4FE1A2BFE5}|Dungeons of Valrinth.csproj|solutionrelative:core\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9614ABC3-8950-4911-929A-FB4FE1A2BFE5}|Dungeons of Valrinth.csproj|C:\\Users\\jgibb\\OneDrive\\Desktop\\Jordan\u0027s Code Project Journey\\Roguelike C#\\Dungeons of Valrinth\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9614ABC3-8950-4911-929A-FB4FE1A2BFE5}|Dungeons of Valrinth.csproj|solutionrelative:game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9614ABC3-8950-4911-929A-FB4FE1A2BFE5}|Dungeons of Valrinth.csproj|C:\\Users\\jgibb\\OneDrive\\Desktop\\Jordan\u0027s Code Project Journey\\Roguelike C#\\Dungeons of Valrinth\\core\\colors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,20 +19,36 @@
       "RelativeMoniker": "D:0:0:{9614ABC3-8950-4911-929A-FB4FE1A2BFE5}|Dungeons of Valrinth.csproj|solutionrelative:core\\actor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9614ABC3-8950-4911-929A-FB4FE1A2BFE5}|Dungeons of Valrinth.csproj|c:\\users\\jgibb\\onedrive\\desktop\\jordan\u0027s code project journey\\roguelike c#\\dungeons of valrinth\\interfaces\\idrawable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9614ABC3-8950-4911-929A-FB4FE1A2BFE5}|Dungeons of Valrinth.csproj|solutionrelative:interfaces\\idrawable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9614ABC3-8950-4911-929A-FB4FE1A2BFE5}|Dungeons of Valrinth.csproj|c:\\users\\jgibb\\onedrive\\desktop\\jordan\u0027s code project journey\\roguelike c#\\dungeons of valrinth\\interfaces\\iactor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9614ABC3-8950-4911-929A-FB4FE1A2BFE5}|Dungeons of Valrinth.csproj|solutionrelative:interfaces\\iactor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9614ABC3-8950-4911-929A-FB4FE1A2BFE5}|Dungeons of Valrinth.csproj|c:\\users\\jgibb\\onedrive\\desktop\\jordan\u0027s code project journey\\roguelike c#\\dungeons of valrinth\\systems\\messagelog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9614ABC3-8950-4911-929A-FB4FE1A2BFE5}|Dungeons of Valrinth.csproj|solutionrelative:systems\\messagelog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9614ABC3-8950-4911-929A-FB4FE1A2BFE5}|Dungeons of Valrinth.csproj|c:\\users\\jgibb\\onedrive\\desktop\\jordan\u0027s code project journey\\roguelike c#\\dungeons of valrinth\\systems\\mapgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9614ABC3-8950-4911-929A-FB4FE1A2BFE5}|Dungeons of Valrinth.csproj|solutionrelative:systems\\mapgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{9614ABC3-8950-4911-929A-FB4FE1A2BFE5}|Dungeons of Valrinth.csproj|c:\\users\\jgibb\\onedrive\\desktop\\jordan\u0027s code project journey\\roguelike c#\\dungeons of valrinth\\core\\dungeonmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9614ABC3-8950-4911-929A-FB4FE1A2BFE5}|Dungeons of Valrinth.csproj|solutionrelative:core\\dungeonmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9614ABC3-8950-4911-929A-FB4FE1A2BFE5}|Dungeons of Valrinth.csproj|c:\\users\\jgibb\\onedrive\\desktop\\jordan\u0027s code project journey\\roguelike c#\\dungeons of valrinth\\core\\swatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9614ABC3-8950-4911-929A-FB4FE1A2BFE5}|Dungeons of Valrinth.csproj|solutionrelative:core\\swatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9614ABC3-8950-4911-929A-FB4FE1A2BFE5}|Dungeons of Valrinth.csproj|c:\\users\\jgibb\\onedrive\\desktop\\jordan\u0027s code project journey\\roguelike c#\\dungeons of valrinth\\core\\direction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9614ABC3-8950-4911-929A-FB4FE1A2BFE5}|Dungeons of Valrinth.csproj|solutionrelative:core\\direction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9614ABC3-8950-4911-929A-FB4FE1A2BFE5}|Dungeons of Valrinth.csproj|c:\\users\\jgibb\\onedrive\\desktop\\jordan\u0027s code project journey\\roguelike c#\\dungeons of valrinth\\systems\\commandsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9614ABC3-8950-4911-929A-FB4FE1A2BFE5}|Dungeons of Valrinth.csproj|solutionrelative:systems\\commandsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9614ABC3-8950-4911-929A-FB4FE1A2BFE5}|Dungeons of Valrinth.csproj|c:\\users\\jgibb\\onedrive\\desktop\\jordan\u0027s code project journey\\roguelike c#\\dungeons of valrinth\\interfaces\\idrawable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9614ABC3-8950-4911-929A-FB4FE1A2BFE5}|Dungeons of Valrinth.csproj|solutionrelative:interfaces\\idrawable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,37 +58,76 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
+              "Title": "MessageLog.cs",
+              "DocumentMoniker": "C:\\Users\\jgibb\\OneDrive\\Desktop\\Jordan\u0027s Code Project Journey\\Roguelike C#\\Dungeons of Valrinth\\Systems\\MessageLog.cs",
+              "RelativeDocumentMoniker": "Systems\\MessageLog.cs",
+              "ToolTip": "C:\\Users\\jgibb\\OneDrive\\Desktop\\Jordan\u0027s Code Project Journey\\Roguelike C#\\Dungeons of Valrinth\\Systems\\MessageLog.cs",
+              "RelativeToolTip": "Systems\\MessageLog.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACsAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-23T01:55:55.416Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CommandSystem.cs",
+              "DocumentMoniker": "C:\\Users\\jgibb\\OneDrive\\Desktop\\Jordan\u0027s Code Project Journey\\Roguelike C#\\Dungeons of Valrinth\\Systems\\CommandSystem.cs",
+              "RelativeDocumentMoniker": "Systems\\CommandSystem.cs",
+              "ToolTip": "C:\\Users\\jgibb\\OneDrive\\Desktop\\Jordan\u0027s Code Project Journey\\Roguelike C#\\Dungeons of Valrinth\\Systems\\CommandSystem.cs",
+              "RelativeToolTip": "Systems\\CommandSystem.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAAAgwDcAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-23T00:45:06.4Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Direction.cs",
+              "DocumentMoniker": "C:\\Users\\jgibb\\OneDrive\\Desktop\\Jordan\u0027s Code Project Journey\\Roguelike C#\\Dungeons of Valrinth\\Core\\Direction.cs",
+              "RelativeDocumentMoniker": "Core\\Direction.cs",
+              "ToolTip": "C:\\Users\\jgibb\\OneDrive\\Desktop\\Jordan\u0027s Code Project Journey\\Roguelike C#\\Dungeons of Valrinth\\Core\\Direction.cs",
+              "RelativeToolTip": "Core\\Direction.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAMAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-23T00:43:47.176Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\jgibb\\OneDrive\\Desktop\\Jordan\u0027s Code Project Journey\\Roguelike C#\\Dungeons of Valrinth\\Core\\Player.cs",
               "RelativeDocumentMoniker": "Core\\Player.cs",
               "ToolTip": "C:\\Users\\jgibb\\OneDrive\\Desktop\\Jordan\u0027s Code Project Journey\\Roguelike C#\\Dungeons of Valrinth\\Core\\Player.cs",
               "RelativeToolTip": "Core\\Player.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAFAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAABFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-22T23:40:26.906Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Actor.cs",
               "DocumentMoniker": "C:\\Users\\jgibb\\OneDrive\\Desktop\\Jordan\u0027s Code Project Journey\\Roguelike C#\\Dungeons of Valrinth\\Core\\Actor.cs",
               "RelativeDocumentMoniker": "Core\\Actor.cs",
               "ToolTip": "C:\\Users\\jgibb\\OneDrive\\Desktop\\Jordan\u0027s Code Project Journey\\Roguelike C#\\Dungeons of Valrinth\\Core\\Actor.cs",
               "RelativeToolTip": "Core\\Actor.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAACQAAAAFAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAKUAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-22T23:39:16.06Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "IDrawable.cs",
               "DocumentMoniker": "C:\\Users\\jgibb\\OneDrive\\Desktop\\Jordan\u0027s Code Project Journey\\Roguelike C#\\Dungeons of Valrinth\\Interfaces\\IDrawable.cs",
               "RelativeDocumentMoniker": "Interfaces\\IDrawable.cs",
@@ -89,39 +140,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "IActor.cs",
               "DocumentMoniker": "C:\\Users\\jgibb\\OneDrive\\Desktop\\Jordan\u0027s Code Project Journey\\Roguelike C#\\Dungeons of Valrinth\\Interfaces\\IActor.cs",
               "RelativeDocumentMoniker": "Interfaces\\IActor.cs",
               "ToolTip": "C:\\Users\\jgibb\\OneDrive\\Desktop\\Jordan\u0027s Code Project Journey\\Roguelike C#\\Dungeons of Valrinth\\Interfaces\\IActor.cs",
               "RelativeToolTip": "Interfaces\\IActor.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAjAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-22T23:33:49.675Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "MapGenerator.cs",
               "DocumentMoniker": "C:\\Users\\jgibb\\OneDrive\\Desktop\\Jordan\u0027s Code Project Journey\\Roguelike C#\\Dungeons of Valrinth\\Systems\\MapGenerator.cs",
               "RelativeDocumentMoniker": "Systems\\MapGenerator.cs",
               "ToolTip": "C:\\Users\\jgibb\\OneDrive\\Desktop\\Jordan\u0027s Code Project Journey\\Roguelike C#\\Dungeons of Valrinth\\Systems\\MapGenerator.cs",
               "RelativeToolTip": "Systems\\MapGenerator.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAiwFcAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-22T23:22:08.726Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "DungeonMap.cs",
               "DocumentMoniker": "C:\\Users\\jgibb\\OneDrive\\Desktop\\Jordan\u0027s Code Project Journey\\Roguelike C#\\Dungeons of Valrinth\\Core\\DungeonMap.cs",
               "RelativeDocumentMoniker": "Core\\DungeonMap.cs",
               "ToolTip": "C:\\Users\\jgibb\\OneDrive\\Desktop\\Jordan\u0027s Code Project Journey\\Roguelike C#\\Dungeons of Valrinth\\Core\\DungeonMap.cs",
               "RelativeToolTip": "Core\\DungeonMap.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADoAAAAoAAAA",
+              "ViewState": "AQIAAFUAAAAAAAAAAAAcwHMAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-22T23:20:23.595Z",
               "EditorCaption": ""
@@ -141,26 +192,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Colors.cs",
               "DocumentMoniker": "C:\\Users\\jgibb\\OneDrive\\Desktop\\Jordan\u0027s Code Project Journey\\Roguelike C#\\Dungeons of Valrinth\\Core\\Colors.cs",
               "RelativeDocumentMoniker": "Core\\Colors.cs",
               "ToolTip": "C:\\Users\\jgibb\\OneDrive\\Desktop\\Jordan\u0027s Code Project Journey\\Roguelike C#\\Dungeons of Valrinth\\Core\\Colors.cs",
               "RelativeToolTip": "Core\\Colors.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAA2AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-22T22:48:21.612Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Game.cs",
               "DocumentMoniker": "C:\\Users\\jgibb\\OneDrive\\Desktop\\Jordan\u0027s Code Project Journey\\Roguelike C#\\Dungeons of Valrinth\\Game.cs",
               "RelativeDocumentMoniker": "Game.cs",
               "ToolTip": "C:\\Users\\jgibb\\OneDrive\\Desktop\\Jordan\u0027s Code Project Journey\\Roguelike C#\\Dungeons of Valrinth\\Game.cs",
               "RelativeToolTip": "Game.cs",
-              "ViewState": "AQIAAE0AAAAAAAAAAAAIwFgAAAAbAAAA",
+              "ViewState": "AQIAAJIAAAAAAAAAAAAuwJ8AAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-22T22:30:58.889Z",
               "EditorCaption": ""
