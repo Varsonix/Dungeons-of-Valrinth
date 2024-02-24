@@ -21,7 +21,7 @@ namespace Dungeons_of_Valrinth.Systems
         // Constructing a new MapGenerator requires the dimensions of the maps it will create
         // as well as the sizes and maximum number of rooms
         public MapGenerator(int width, int height,
-        int maxRooms, int roomMaxSize, int roomMinSize)
+        int maxRooms, int roomMaxSize, int roomMinSize, int mapLevel)
         {
             _width = width;
             _height = height;
@@ -63,8 +63,12 @@ namespace Dungeons_of_Valrinth.Systems
 
             // Iterate through each room that was generated
             // Don't do anything with the first room, so start at r = 1 instead of r = 0
-            for (int r = 1; r < _map.Rooms.Count; r++)
+            for (int r = 0; r < _map.Rooms.Count; r++)
             {
+                if ( r == 0)
+                {
+                    continue;
+                }
                 // For all remaing rooms get the center of the room and the previous room
                 int previousRoomCenterX = _map.Rooms[r - 1].Center.X;
                 int previousRoomCenterY = _map.Rooms[r - 1].Center.Y;
@@ -92,6 +96,7 @@ namespace Dungeons_of_Valrinth.Systems
                 CreateDoors(room);
             }
 
+            CreateStairs();
             PlacePlayer();
             PlaceMonsters();
 
@@ -213,6 +218,22 @@ namespace Dungeons_of_Valrinth.Systems
             player.Y = _map.Rooms[0].Center.Y;
 
             _map.AddPlayer(player);
+        }
+
+        private void CreateStairs()
+        {
+            _map.StairsUp = new Stairs
+            {
+                X = _map.Rooms.First().Center.X + 1,
+                Y = _map.Rooms.First().Center.Y,
+                IsUp = true
+            };
+            _map.StairsDown = new Stairs
+            {
+                X = _map.Rooms.Last().Center.X,
+                Y = _map.Rooms.Last().Center.Y,
+                IsUp = false
+            };
         }
 
         private void PlaceMonsters()

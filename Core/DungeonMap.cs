@@ -9,11 +9,18 @@ namespace Dungeons_of_Valrinth.Core
     public class DungeonMap : Map
     {
         private readonly List<Monster> _monsters;
+
         public List<Rectangle> Rooms { get; set; }
         public List<Door> Doors { get; set; }
+        public Stairs StairsUp { get; set; }
+        public Stairs StairsDown { get; set; }
 
         public DungeonMap()
         {
+            // Call clear on the scheduling system when a new Dungeon Map is created.
+            // We do this because when we make a new level by going down stairs we
+            // want to make sure that all of the monsters from the previous level are removed from the schedule and do not continue to try to act.
+            Game.SchedulingSystem.Clear();
             // Initialize the list of rooms when we create a new DungeonMap
             _monsters = new List<Monster>();
             Rooms = new List<Rectangle>();
@@ -27,7 +34,7 @@ namespace Dungeons_of_Valrinth.Core
             // Compute the field-of-view based on the player's location and awareness
             ComputeFov(player.X, player.Y, player.Awareness, true);
             // Mark all cells in field-of-view as having been explored
-            foreach (ICell cell in GetAllCells())
+            foreach (Cell cell in GetAllCells())
             {
                 if (IsInFov(cell.X, cell.Y))
                 {
@@ -50,6 +57,7 @@ namespace Dungeons_of_Valrinth.Core
                 actor.Y = y;
                 // The new cell the actor is on is now not walkable
                 SetIsWalkable(actor.X, actor.Y, false);
+                // Try to open a door if one exists here
                 OpenDoor(actor, x, y);
                 // Don't forget to update the field of view if we just repositioned the player
                 if (actor is Player)
@@ -112,6 +120,12 @@ namespace Dungeons_of_Valrinth.Core
             return _monsters.FirstOrDefault(m => m.X == x && m.Y == y);
         }
 
+        public bool CanMoveDownToNextLevel()
+        {
+            Player player = Game.Player;
+            return StairsDown.X == player.X && StairsDown.Y == player.Y;
+        }
+
         // A helper method for setting the IsWalkable property on a Cell
         public void SetIsWalkable(int x, int y, bool isWalkable)
         {
@@ -163,13 +177,17 @@ namespace Dungeons_of_Valrinth.Core
             {
                 SetConsoleSymbolForCell(mapConsole, cell);
             }
-            // Keep an index so we know which position to draw monster stats at
-            int i = 0;
 
             foreach (Door door in Doors)
             {
                 door.Draw(mapConsole, this);
             }
+
+            StairsUp.Draw(mapConsole, this);
+            StairsDown.Draw(mapConsole, this);
+
+            // Keep an index so we know which position to draw monster stats at
+            int i = 0;
 
             // Iterate through each monster on the map and draw it after drawing the Cells
             foreach (Monster monster in _monsters)
@@ -187,17 +205,13 @@ namespace Dungeons_of_Valrinth.Core
 
         private void SetConsoleSymbolForCell(RLConsole console, Cell cell)
         {
-            // When we haven't explored a cell yet, we don't want to draw anything
             if (!cell.IsExplored)
             {
                 return;
             }
 
-            // When a cell is currently in the field-of-view it should be drawn with ligher colors
             if (IsInFov(cell.X, cell.Y))
             {
-                // Choose the symbol to draw based on if the cell is walkable or not
-                // '.' for floor and '#' for walls
                 if (cell.IsWalkable)
                 {
                     console.Set(cell.X, cell.Y, Colors.FloorFov, Colors.FloorBackgroundFov, '.');
@@ -207,7 +221,6 @@ namespace Dungeons_of_Valrinth.Core
                     console.Set(cell.X, cell.Y, Colors.WallFov, Colors.WallBackgroundFov, '#');
                 }
             }
-            // When a cell is outside of the field of view draw it with darker colors
             else
             {
                 if (cell.IsWalkable)

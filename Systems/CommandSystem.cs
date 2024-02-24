@@ -38,37 +38,11 @@ namespace Dungeons_of_Valrinth.Systems
                         x = Game.Player.X + 1;
                         break;
                     }
-                case Direction.UpLeft:
-                    {
-                        x = Game.Player.X - 1;
-                        y = Game.Player.Y - 1;
-                        break;
-                    }
-                case Direction.UpRight:
-                    {
-                        x = Game.Player.X + 1;
-                        y = Game.Player.Y - 1;
-                        break;
-                    }
-                case Direction.DownLeft:
-                    {
-                        x = Game.Player.X - 1;
-                        y = Game.Player.Y + 1;
-                        break;
-                    }
-                case Direction.DownRight:
-                    {
-                        x = Game.Player.X + 1;
-                        y = Game.Player.Y + 1;
-                        break;
-                    }
                 default:
                     {
                         return false;
                     }
             }
-
-            
 
             if (Game.DungeonMap.SetActorPosition(Game.Player, x, y))
             {
@@ -76,6 +50,7 @@ namespace Dungeons_of_Valrinth.Systems
             }
 
             Monster monster = Game.DungeonMap.GetMonsterAt(x, y);
+
             if (monster != null)
             {
                 Attack(Game.Player, monster);
